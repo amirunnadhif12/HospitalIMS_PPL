@@ -17,7 +17,7 @@ class Subscribe extends Component
         ]);
 
         subscriber::create([
-            'email'         => $this->email,
+            'email' => $this->email,
         ]);
 
         //unset variables

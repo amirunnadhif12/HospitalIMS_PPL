@@ -33,7 +33,7 @@ class AppointmentModelTest extends TestCase
             'salary' => 15000000,
             'address' => 'Jl. Dokter No. 1',
             'qualification' => 'Sp.PD',
-            'position' => 'Doctor',
+            'position' => 'doctor',
             'status' => 'active',
         ]);
 

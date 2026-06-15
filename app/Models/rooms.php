@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class rooms extends Model
 {
-    use HasFactory,SoftDeletes;
-    protected $fillable=[
+    use HasFactory, SoftDeletes;
+    protected $fillable = [
         'department_id',
         'type',
         'status'
-];
+    ];
 
     public function department()
     {

@@ -24,28 +24,28 @@ class Appointmentform extends Component
             'doctor' => 'required',
             'address' => 'required',
             'message' => 'required|max:550',
-            ]);
+        ]);
 
         requestedappointment::create([
-            'name'          => $this->name,
-            'email'         => $this->email,
-            'phone'         => $this->phone,
-            'stime'       => $this->stime,
-            'address'       => $this->address,
-            'doctor'       => $this->doctor,
+            'name' => $this->name,
+            'email' => $this->email,
+            'phone' => $this->phone,
+            'stime' => $this->stime,
+            'address' => $this->address,
+            'doctor' => $this->doctor,
             'message' => $this->message,
         ]);
 
-           //unset variables
-           $this->name="";
-           $this->email="";
-           $this->stime="";
-           $this->phone="";
-           $this->doctor="";
-           $this->address="";
-           $this->message="";
+        //unset variables
+        $this->name = "";
+        $this->email = "";
+        $this->stime = "";
+        $this->phone = "";
+        $this->doctor = "";
+        $this->address = "";
+        $this->message = "";
 
-           session()->flash('message', 'Your Appointment Added successfully.');
+        session()->flash('message', 'Your Appointment Added successfully.');
     }
     public function render()
     {

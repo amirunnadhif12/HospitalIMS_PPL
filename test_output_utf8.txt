@@ -1,0 +1,528 @@
+﻿Warning: TTY mode is not supported on Windows platform.
+
+  [30;42;1m PASS [39;49;22m[39m Tests\Unit\ExampleTest[39m
+  [32;1mΓ£ô[39;22m[39m [2mbasic test[22m[39m
+
+  [37;41;1m FAIL [39;49;22m[39m Tests\Unit\Models\AppointmentModelTest[39m
+  [31;1mΓ¿»[39;22m[39m [2mappointment can be created[22m[39m
+  [31;1mΓ¿»[39;22m[39m [2mappointment belongs to patient[22m[39m
+  [31;1mΓ¿»[39;22m[39m [2mappointment belongs to doctor[22m[39m
+  [31;1mΓ¿»[39;22m[39m [2mappointment has many checkups[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mappointment has correct fillable[22m[39m
+
+  [30;42;1m PASS [39;49;22m[39m Tests\Unit\Models\DepartmentModelTest[39m
+  [32;1mΓ£ô[39;22m[39m [2mdepartment can be created[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mdepartment has many rooms[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mdepartment belongs to block[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mdepartment has correct fillable[22m[39m
+
+  [30;42;1m PASS [39;49;22m[39m Tests\Unit\Models\DoctorModelTest[39m
+  [32;1mΓ£ô[39;22m[39m [2mdoctor can be created with employee id[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mdoctor belongs to employee[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mdoctor has correct fillable[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mdoctor supports soft delete[22m[39m
+
+  [30;42;1m PASS [39;49;22m[39m Tests\Unit\Models\MedicineModelTest[39m
+  [32;1mΓ£ô[39;22m[39m [2mmedicine can be created[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mmedicine has correct fillable[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mmedicine supports soft delete[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mmedicine can have zero price[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mmedicine large quantity[22m[39m
+
+  [30;42;1m PASS [39;49;22m[39m Tests\Unit\Models\MiscModelsTest[39m
+  [32;1mΓ£ô[39;22m[39m [2mbill can be created[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mbill belongs to patient[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2memployee can be created[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2memployee supports soft delete[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mbed can be created with relations[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2muser belongs to role[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mrole has many users[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2msubscriber can be created[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mcontact can be created[22m[39m
+
+  [30;42;1m PASS [39;49;22m[39m Tests\Unit\Models\PatientModelTest[39m
+  [32;1mΓ£ô[39;22m[39m [2mpatient can be created with valid data[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mpatient has correct fillable attributes[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mpatient supports soft delete[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mpatient can be created without photo[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mpatient can be created with photo path[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mpatient can be restored after soft delete[22m[39m
+
+  [37;41;1m FAIL [39;49;22m[39m Tests\Unit\Models\RoomModelTest[39m
+  [32;1mΓ£ô[39;22m[39m [2mroom can be created[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mroom belongs to department[22m[39m
+  [31;1mΓ¿»[39;22m[39m [2mroom has many beds[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mroom supports soft delete[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mroom type values[22m[39m
+
+  [30;42;1m PASS [39;49;22m[39m Tests\Feature\AdminAccessTest[39m
+  [32;1mΓ£ô[39;22m[39m [2mguest cannot access admin dashboard[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mguest cannot access admin patients[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mguest cannot access admin rooms[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mguest cannot access admin beds[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mguest cannot access admin departments[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mguest cannot access admin appointment[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mguest cannot access admin employees[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mguest cannot access admin medicines[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mguest cannot access admin settings[22m[39m
+
+  [30;42;1m PASS [39;49;22m[39m Tests\Feature\AuthenticationTest[39m
+  [32;1mΓ£ô[39;22m[39m [2muser can register[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2muser can login with valid credentials[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2muser cannot login with wrong password[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2muser cannot login with unregistered email[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2muser can logout[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mregistration fails with duplicate email[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mregistration fails without password confirmation[22m[39m
+
+  [37;41;1m FAIL [39;49;22m[39m Tests\Feature\DataIntegrationTest[39m
+  [32;1mΓ£ô[39;22m[39m [2mfull hospital hierarchy integration[22m[39m
+  [31;1mΓ¿»[39;22m[39m [2mappointment workflow integration[22m[39m
+  [31;1mΓ¿»[39;22m[39m [2mbilling workflow integration[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mmultiple rooms in department consistency[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mdata consistency after patient soft delete[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mmultiple departments in block[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mmedicine crud integration[22m[39m
+
+  [37;41;1m FAIL [39;49;22m[39m Tests\Feature\ExampleTest[39m
+  [31;1mΓ¿»[39;22m[39m [2mbasic test[22m[39m
+
+  [30;42;1m PASS [39;49;22m[39m Tests\Feature\PublicPageTest[39m
+  [32;1mΓ£ô[39;22m[39m [2mhomepage is accessible[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mabout page is accessible[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mcontact page is accessible[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mdoctors page is accessible[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mservices page is accessible[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mlogin page is accessible[22m[39m
+  [32;1mΓ£ô[39;22m[39m [2mregister page is accessible[22m[39m
+
+  [2m---[22m
+
+  [31;1mΓÇó Tests\Unit\Models\AppointmentModelTest [39;22m> [31;1mappointment can be created[39;22m
+  [41;1m Illuminate\Database\QueryException [49;22m
+
+[39;1m  SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: appointments.description (SQL: insert into "appointments" ("patient_id", "doctor_id", "intime", "outtime", "updated_at", "created_at") values (1, 3, 2026-06-01 09:00:00, 2026-06-01 10:00:00, 2026-06-14 16:00:26, 2026-06-14 16:00:26))[39;22m
+
+  at [32mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39m:[32m712[39m
+    708Γûò         // If an exception occurs when attempting to run a query, we'll format the error
+    709Γûò         // message to include the bindings with SQL, which will make this exception a
+    710Γûò         // lot more helpful to the developer instead of just the database's errors.
+    711Γûò         catch (Exception $e) {
+  Γ₧£ 712Γûò             throw new QueryException(
+    713Γûò                 $query, $this->prepareBindings($bindings), $e
+    714Γûò             );
+    715Γûò         }
+    716Γûò     }
+
+  [33m1   [39m[39;1mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39;22m:[39;1m501[39;22m
+  [37m    PDOException::("SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: appointments.description")[39m
+
+  [33m2   [39m[39;1mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39;22m:[39;1m501[39;22m
+  [37m    PDOStatement::execute()[39m
+
+  [31;1mΓÇó Tests\Unit\Models\AppointmentModelTest [39;22m> [31;1mappointment belongs to patient[39;22m
+  [41;1m Illuminate\Database\QueryException [49;22m
+
+[39;1m  SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: appointments.description (SQL: insert into "appointments" ("patient_id", "doctor_id", "intime", "outtime", "updated_at", "created_at") values (1, 3, 2026-06-01 09:00:00, 2026-06-01 10:00:00, 2026-06-14 16:00:26, 2026-06-14 16:00:26))[39;22m
+
+  at [32mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39m:[32m712[39m
+    708Γûò         // If an exception occurs when attempting to run a query, we'll format the error
+    709Γûò         // message to include the bindings with SQL, which will make this exception a
+    710Γûò         // lot more helpful to the developer instead of just the database's errors.
+    711Γûò         catch (Exception $e) {
+  Γ₧£ 712Γûò             throw new QueryException(
+    713Γûò                 $query, $this->prepareBindings($bindings), $e
+    714Γûò             );
+    715Γûò         }
+    716Γûò     }
+
+  [33m1   [39m[39;1mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39;22m:[39;1m501[39;22m
+  [37m    PDOException::("SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: appointments.description")[39m
+
+  [33m2   [39m[39;1mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39;22m:[39;1m501[39;22m
+  [37m    PDOStatement::execute()[39m
+
+  [31;1mΓÇó Tests\Unit\Models\AppointmentModelTest [39;22m> [31;1mappointment belongs to doctor[39;22m
+  [41;1m Illuminate\Database\QueryException [49;22m
+
+[39;1m  SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: appointments.description (SQL: insert into "appointments" ("patient_id", "doctor_id", "intime", "outtime", "updated_at", "created_at") values (1, 3, 2026-06-01 09:00:00, 2026-06-01 10:00:00, 2026-06-14 16:00:26, 2026-06-14 16:00:26))[39;22m
+
+  at [32mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39m:[32m712[39m
+    708Γûò         // If an exception occurs when attempting to run a query, we'll format the error
+    709Γûò         // message to include the bindings with SQL, which will make this exception a
+    710Γûò         // lot more helpful to the developer instead of just the database's errors.
+    711Γûò         catch (Exception $e) {
+  Γ₧£ 712Γûò             throw new QueryException(
+    713Γûò                 $query, $this->prepareBindings($bindings), $e
+    714Γûò             );
+    715Γûò         }
+    716Γûò     }
+
+  [33m1   [39m[39;1mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39;22m:[39;1m501[39;22m
+  [37m    PDOException::("SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: appointments.description")[39m
+
+  [33m2   [39m[39;1mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39;22m:[39;1m501[39;22m
+  [37m    PDOStatement::execute()[39m
+
+  [31;1mΓÇó Tests\Unit\Models\AppointmentModelTest [39;22m> [31;1mappointment has many checkups[39;22m
+  [41;1m Illuminate\Database\QueryException [49;22m
+
+[39;1m  SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: appointments.description (SQL: insert into "appointments" ("patient_id", "doctor_id", "intime", "outtime", "updated_at", "created_at") values (1, 3, 2026-06-01 09:00:00, 2026-06-01 10:00:00, 2026-06-14 16:00:26, 2026-06-14 16:00:26))[39;22m
+
+  at [32mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39m:[32m712[39m
+    708Γûò         // If an exception occurs when attempting to run a query, we'll format the error
+    709Γûò         // message to include the bindings with SQL, which will make this exception a
+    710Γûò         // lot more helpful to the developer instead of just the database's errors.
+    711Γûò         catch (Exception $e) {
+  Γ₧£ 712Γûò             throw new QueryException(
+    713Γûò                 $query, $this->prepareBindings($bindings), $e
+    714Γûò             );
+    715Γûò         }
+    716Γûò     }
+
+  [33m1   [39m[39;1mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39;22m:[39;1m501[39;22m
+  [37m    PDOException::("SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: appointments.description")[39m
+
+  [33m2   [39m[39;1mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39;22m:[39;1m501[39;22m
+  [37m    PDOStatement::execute()[39m
+
+  [31;1mΓÇó Tests\Unit\Models\RoomModelTest [39;22m> [31;1mroom has many beds[39;22m
+  [41;1m Illuminate\Database\QueryException [49;22m
+
+[39;1m  SQLSTATE[HY000]: General error: 1 no such column: beds.rooms_id (SQL: select * from "beds" where "beds"."rooms_id" = 9 and "beds"."rooms_id" is not null)[39;22m
+
+  at [32mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39m:[32m712[39m
+    708Γûò         // If an exception occurs when attempting to run a query, we'll format the error
+    709Γûò         // message to include the bindings with SQL, which will make this exception a
+    710Γûò         // lot more helpful to the developer instead of just the database's errors.
+    711Γûò         catch (Exception $e) {
+  Γ₧£ 712Γûò             throw new QueryException(
+    713Γûò                 $query, $this->prepareBindings($bindings), $e
+    714Γûò             );
+    715Γûò         }
+    716Γûò     }
+
+  [33m1   [39m[39;1mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39;22m:[39;1m368[39;22m
+  [37m    PDOException::("SQLSTATE[HY000]: General error: 1 no such column: beds.rooms_id")[39m
+
+  [33m2   [39m[39;1mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39;22m:[39;1m368[39;22m
+  [37m    PDO::prepare("select * from "beds" where "beds"."rooms_id" = ? and "beds"."rooms_id" is not null")[39m
+
+  [31;1mΓÇó Tests\Feature\DataIntegrationTest [39;22m> [31;1mappointment workflow integration[39;22m
+  [41;1m Illuminate\Database\QueryException [49;22m
+
+[39;1m  SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: appointments.description (SQL: insert into "appointments" ("patient_id", "doctor_id", "intime", "outtime", "updated_at", "created_at") values (1, 3, 2026-06-01 09:00:00, 2026-06-01 10:00:00, 2026-06-14 16:00:31, 2026-06-14 16:00:31))[39;22m
+
+  at [32mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39m:[32m712[39m
+    708Γûò         // If an exception occurs when attempting to run a query, we'll format the error
+    709Γûò         // message to include the bindings with SQL, which will make this exception a
+    710Γûò         // lot more helpful to the developer instead of just the database's errors.
+    711Γûò         catch (Exception $e) {
+  Γ₧£ 712Γûò             throw new QueryException(
+    713Γûò                 $query, $this->prepareBindings($bindings), $e
+    714Γûò             );
+    715Γûò         }
+    716Γûò     }
+
+  [33m1   [39m[39;1mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39;22m:[39;1m501[39;22m
+  [37m    PDOException::("SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: appointments.description")[39m
+
+  [33m2   [39m[39;1mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39;22m:[39;1m501[39;22m
+  [37m    PDOStatement::execute()[39m
+
+  [31;1mΓÇó Tests\Feature\DataIntegrationTest [39;22m> [31;1mbilling workflow integration[39;22m
+  [41;1m Illuminate\Database\QueryException [49;22m
+
+[39;1m  SQLSTATE[23000]: Integrity constraint violation: 19 CHECK constraint failed: status (SQL: insert into "payments" ("patient_id", "bill_id", "amount", "status", "mode", "updated_at", "created_at") values (1, 1, 500000, completed, cash, 2026-06-14 16:00:31, 2026-06-14 16:00:31))[39;22m
+
+  at [32mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39m:[32m712[39m
+    708Γûò         // If an exception occurs when attempting to run a query, we'll format the error
+    709Γûò         // message to include the bindings with SQL, which will make this exception a
+    710Γûò         // lot more helpful to the developer instead of just the database's errors.
+    711Γûò         catch (Exception $e) {
+  Γ₧£ 712Γûò             throw new QueryException(
+    713Γûò                 $query, $this->prepareBindings($bindings), $e
+    714Γûò             );
+    715Γûò         }
+    716Γûò     }
+
+  [33m1   [39m[39;1mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39;22m:[39;1m501[39;22m
+  [37m    PDOException::("SQLSTATE[23000]: Integrity constraint violation: 19 CHECK constraint failed: status")[39m
+
+  [33m2   [39m[39;1mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php[39;22m:[39;1m501[39;22m
+  [37m    PDOStatement::execute()[39m
+
+  [31;1mΓÇó Tests\Feature\ExampleTest [39;22m> [31;1mbasic test[39;22m
+[39;1m  Expected response status code [200] but received 500.
+  
+  The following exception occurred during the request:
+  
+  PDOException: SQLSTATE[HY000]: General error: 1 no such table: settings in D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php:368
+  Stack trace:
+  #0 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php(368): PDO->prepare('select * from "...')
+  #1 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php(705): Illuminate\Database\Connection->Illuminate\Database\{closure}('select * from "...', Array)
+  #2 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php(672): Illuminate\Database\Connection->runQueryCallback('select * from "...', Array, Object(Closure))
+  #3 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php(359): Illuminate\Database\Connection->run('select * from "...', Array, Object(Closure))
+  #4 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(2413): Illuminate\Database\Connection->select('select * from "...', Array, true)
+  #5 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(2402): Illuminate\Database\Query\Builder->runSelect()
+  #6 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(2936): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+  #7 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(2401): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+  #8 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(625): Illuminate\Database\Query\Builder->get(Array)
+  #9 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(609): Illuminate\Database\Eloquent\Builder->getModels(Array)
+  #10 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Concerns\BuildsQueries.php(294): Illuminate\Database\Eloquent\Builder->get(Array)
+  #11 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\storage\framework\views\be1a43f6679f5332ef6cd5fdfebe7722c632044f.php(3): Illuminate\Database\Eloquent\Builder->first()
+  #12 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(107): require('D:\\Kuliah\\smest...')
+  #13 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+  #14 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('D:\\Kuliah\\smest...', Array)
+  #15 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\livewire\livewire\src\ComponentConcerns\RendersLivewireComponents.php(69): Illuminate\View\Engines\PhpEngine->evaluatePath('D:\\Kuliah\\smest...', Array)
+  #16 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(61): Livewire\CompilerEngineForIgnition->evaluatePath('D:\\Kuliah\\smest...', Array)
+  #17 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\facade\ignition\src\Views\Engines\CompilerEngine.php(37): Illuminate\View\Engines\CompilerEngine->get('D:\\Kuliah\\smest...', Array)
+  #18 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\livewire\livewire\src\ComponentConcerns\RendersLivewireComponents.php(35): Facade\Ignition\Views\Engines\CompilerEngine->get('D:\\Kuliah\\smest...', Array)
+  #19 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\View\View.php(139): Livewire\CompilerEngineForIgnition->get('D:\\Kuliah\\smest...', Array)
+  #20 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\View\View.php(122): Illuminate\View\View->getContents()
+  #21 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\View\View.php(91): Illuminate\View\View->renderContents()
+  #22 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Http\Response.php(69): Illuminate\View\View->render()
+  #23 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Http\Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+  #24 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(820): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 200, Array)
+  #25 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(789): Illuminate\Routing\Router::toResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+  #26 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(720): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+  #27 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(128): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+  #28 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #29 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #30 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(78): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #31 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #32 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #33 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #34 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(121): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #35 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Session\Middleware\StartSession->handleStatefulRequest(Object(Illuminate\Http\Request), Object(Illuminate\Session\Store), Object(Closure))
+  #36 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #37 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #38 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #39 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(67): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #40 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #41 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #42 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(719): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+  #43 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(698): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+  #44 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(662): Illuminate\Routing\Router->runRoute(Object(Illuminate\Http\Request), Object(Illuminate\Routing\Route))
+  #45 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(651): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+  #46 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(167): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+  #47 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(128): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+  #48 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\livewire\livewire\src\DisableBrowserCache.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #49 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Livewire\DisableBrowserCache->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #50 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #51 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #52 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #53 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #54 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php(40): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #55 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Foundation\Http\Middleware\TrimStrings->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #56 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #57 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #58 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php(86): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #59 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #60 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\fruitcake\laravel-cors\src\HandleCors.php(38): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #61 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Fruitcake\Cors\HandleCors->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #62 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\fideloper\proxy\src\TrustProxies.php(57): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #63 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Fideloper\Proxy\TrustProxies->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #64 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #65 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(142): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+  #66 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(111): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+  #67 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Testing\Concerns\MakesHttpRequests.php(509): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+  #68 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Testing\Concerns\MakesHttpRequests.php(294): Illuminate\Foundation\Testing\TestCase->call('GET', '/', Array, Array, Array, Array)
+  #69 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\tests\Feature\ExampleTest.php(17): Illuminate\Foundation\Testing\TestCase->get('/')
+  #70 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestCase.php(1617): Tests\Feature\ExampleTest->testBasicTest()
+  #71 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestCase.php(1223): PHPUnit\Framework\TestCase->runTest()
+  #72 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestResult.php(729): PHPUnit\Framework\TestCase->runBare()
+  #73 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestCase.php(973): PHPUnit\Framework\TestResult->run(Object(Tests\Feature\ExampleTest))
+  #74 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestSuite.php(685): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+  #75 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestSuite.php(685): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+  #76 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestSuite.php(685): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+  #77 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(651): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+  #78 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\TextUI\Command.php(146): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\Framework\TestSuite), Array, Array, true)
+  #79 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\TextUI\Command.php(99): PHPUnit\TextUI\Command->run(Array, true)
+  #80 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\phpunit(107): PHPUnit\TextUI\Command::main()
+  #81 {main}
+  
+  Next Illuminate\Database\QueryException: SQLSTATE[HY000]: General error: 1 no such table: settings (SQL: select * from "settings" where "settings"."deleted_at" is null order by "created_at" desc limit 1) in D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php:712
+  Stack trace:
+  #0 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php(672): Illuminate\Database\Connection->runQueryCallback('select * from "...', Array, Object(Closure))
+  #1 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php(359): Illuminate\Database\Connection->run('select * from "...', Array, Object(Closure))
+  #2 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(2413): Illuminate\Database\Connection->select('select * from "...', Array, true)
+  #3 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(2402): Illuminate\Database\Query\Builder->runSelect()
+  #4 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(2936): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+  #5 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(2401): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+  #6 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(625): Illuminate\Database\Query\Builder->get(Array)
+  #7 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(609): Illuminate\Database\Eloquent\Builder->getModels(Array)
+  #8 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Concerns\BuildsQueries.php(294): Illuminate\Database\Eloquent\Builder->get(Array)
+  #9 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\storage\framework\views\be1a43f6679f5332ef6cd5fdfebe7722c632044f.php(3): Illuminate\Database\Eloquent\Builder->first()
+  #10 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(107): require('D:\\Kuliah\\smest...')
+  #11 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+  #12 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('D:\\Kuliah\\smest...', Array)
+  #13 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\livewire\livewire\src\ComponentConcerns\RendersLivewireComponents.php(69): Illuminate\View\Engines\PhpEngine->evaluatePath('D:\\Kuliah\\smest...', Array)
+  #14 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(61): Livewire\CompilerEngineForIgnition->evaluatePath('D:\\Kuliah\\smest...', Array)
+  #15 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\facade\ignition\src\Views\Engines\CompilerEngine.php(37): Illuminate\View\Engines\CompilerEngine->get('D:\\Kuliah\\smest...', Array)
+  #16 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\livewire\livewire\src\ComponentConcerns\RendersLivewireComponents.php(35): Facade\Ignition\Views\Engines\CompilerEngine->get('D:\\Kuliah\\smest...', Array)
+  #17 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\View\View.php(139): Livewire\CompilerEngineForIgnition->get('D:\\Kuliah\\smest...', Array)
+  #18 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\View\View.php(122): Illuminate\View\View->getContents()
+  #19 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\View\View.php(91): Illuminate\View\View->renderContents()
+  #20 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Http\Response.php(69): Illuminate\View\View->render()
+  #21 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Http\Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+  #22 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(820): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 200, Array)
+  #23 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(789): Illuminate\Routing\Router::toResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+  #24 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(720): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+  #25 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(128): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+  #26 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #27 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #28 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(78): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #29 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #30 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #31 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #32 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(121): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #33 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Session\Middleware\StartSession->handleStatefulRequest(Object(Illuminate\Http\Request), Object(Illuminate\Session\Store), Object(Closure))
+  #34 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #35 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #36 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #37 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(67): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #38 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #39 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #40 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(719): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+  #41 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(698): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+  #42 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(662): Illuminate\Routing\Router->runRoute(Object(Illuminate\Http\Request), Object(Illuminate\Routing\Route))
+  #43 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(651): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+  #44 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(167): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+  #45 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(128): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+  #46 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\livewire\livewire\src\DisableBrowserCache.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #47 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Livewire\DisableBrowserCache->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #48 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #49 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #50 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #51 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #52 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php(40): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #53 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Foundation\Http\Middleware\TrimStrings->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #54 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #55 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #56 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php(86): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #57 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #58 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\fruitcake\laravel-cors\src\HandleCors.php(38): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #59 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Fruitcake\Cors\HandleCors->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #60 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\fideloper\proxy\src\TrustProxies.php(57): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #61 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Fideloper\Proxy\TrustProxies->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #62 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #63 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(142): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+  #64 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(111): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+  #65 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Testing\Concerns\MakesHttpRequests.php(509): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+  #66 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Testing\Concerns\MakesHttpRequests.php(294): Illuminate\Foundation\Testing\TestCase->call('GET', '/', Array, Array, Array, Array)
+  #67 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\tests\Feature\ExampleTest.php(17): Illuminate\Foundation\Testing\TestCase->get('/')
+  #68 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestCase.php(1617): Tests\Feature\ExampleTest->testBasicTest()
+  #69 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestCase.php(1223): PHPUnit\Framework\TestCase->runTest()
+  #70 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestResult.php(729): PHPUnit\Framework\TestCase->runBare()
+  #71 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestCase.php(973): PHPUnit\Framework\TestResult->run(Object(Tests\Feature\ExampleTest))
+  #72 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestSuite.php(685): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+  #73 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestSuite.php(685): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+  #74 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestSuite.php(685): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+  #75 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(651): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+  #76 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\TextUI\Command.php(146): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\Framework\TestSuite), Array, Array, true)
+  #77 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\TextUI\Command.php(99): PHPUnit\TextUI\Command->run(Array, true)
+  #78 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\phpunit(107): PHPUnit\TextUI\Command::main()
+  #79 {main}
+  
+  Next Facade\Ignition\Exceptions\ViewException: SQLSTATE[HY000]: General error: 1 no such table: settings (SQL: select * from "settings" where "settings"."deleted_at" is null order by "created_at" desc limit 1) (View: D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\resources\views\index.blade.php) in D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php:712
+  Stack trace:
+  #0 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php(672): Illuminate\Database\Connection->runQueryCallback('select * from "...', Array, Object(Closure))
+  #1 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Connection.php(359): Illuminate\Database\Connection->run('select * from "...', Array, Object(Closure))
+  #2 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(2413): Illuminate\Database\Connection->select('select * from "...', Array, true)
+  #3 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(2402): Illuminate\Database\Query\Builder->runSelect()
+  #4 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(2936): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+  #5 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(2401): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+  #6 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(625): Illuminate\Database\Query\Builder->get(Array)
+  #7 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(609): Illuminate\Database\Eloquent\Builder->getModels(Array)
+  #8 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Database\Concerns\BuildsQueries.php(294): Illuminate\Database\Eloquent\Builder->get(Array)
+  #9 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\resources\views/index.blade.php(3): Illuminate\Database\Eloquent\Builder->first()
+  #10 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(107): require('D:\\Kuliah\\smest...')
+  #11 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+  #12 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('D:\\Kuliah\\smest...', Array)
+  #13 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\livewire\livewire\src\ComponentConcerns\RendersLivewireComponents.php(69): Illuminate\View\Engines\PhpEngine->evaluatePath('D:\\Kuliah\\smest...', Array)
+  #14 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(61): Livewire\CompilerEngineForIgnition->evaluatePath('D:\\Kuliah\\smest...', Array)
+  #15 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\facade\ignition\src\Views\Engines\CompilerEngine.php(37): Illuminate\View\Engines\CompilerEngine->get('D:\\Kuliah\\smest...', Array)
+  #16 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\livewire\livewire\src\ComponentConcerns\RendersLivewireComponents.php(35): Facade\Ignition\Views\Engines\CompilerEngine->get('D:\\Kuliah\\smest...', Array)
+  #17 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\View\View.php(139): Livewire\CompilerEngineForIgnition->get('D:\\Kuliah\\smest...', Array)
+  #18 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\View\View.php(122): Illuminate\View\View->getContents()
+  #19 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\View\View.php(91): Illuminate\View\View->renderContents()
+  #20 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Http\Response.php(69): Illuminate\View\View->render()
+  #21 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Http\Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+  #22 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(820): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 200, Array)
+  #23 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(789): Illuminate\Routing\Router::toResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+  #24 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(720): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+  #25 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(128): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+  #26 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(50): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #27 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #28 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(78): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #29 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #30 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #31 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #32 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(121): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #33 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Session\Middleware\StartSession->handleStatefulRequest(Object(Illuminate\Http\Request), Object(Illuminate\Session\Store), Object(Closure))
+  #34 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #35 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #36 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #37 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(67): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #38 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #39 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #40 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(719): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+  #41 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(698): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+  #42 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(662): Illuminate\Routing\Router->runRoute(Object(Illuminate\Http\Request), Object(Illuminate\Routing\Route))
+  #43 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Routing\Router.php(651): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+  #44 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(167): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+  #45 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(128): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+  #46 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\livewire\livewire\src\DisableBrowserCache.php(19): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #47 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Livewire\DisableBrowserCache->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #48 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #49 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #50 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #51 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(21): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #52 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php(40): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #53 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Foundation\Http\Middleware\TrimStrings->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #54 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #55 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #56 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php(86): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #57 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #58 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\fruitcake\laravel-cors\src\HandleCors.php(38): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #59 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Fruitcake\Cors\HandleCors->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #60 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\fideloper\proxy\src\TrustProxies.php(57): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #61 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(167): Fideloper\Proxy\TrustProxies->handle(Object(Illuminate\Http\Request), Object(Closure))
+  #62 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+  #63 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(142): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+  #64 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(111): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+  #65 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Testing\Concerns\MakesHttpRequests.php(509): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+  #66 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\laravel\framework\src\Illuminate\Foundation\Testing\Concerns\MakesHttpRequests.php(294): Illuminate\Foundation\Testing\TestCase->call('GET', '/', Array, Array, Array, Array)
+  #67 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\tests\Feature\ExampleTest.php(17): Illuminate\Foundation\Testing\TestCase->get('/')
+  #68 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestCase.php(1617): Tests\Feature\ExampleTest->testBasicTest()
+  #69 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestCase.php(1223): PHPUnit\Framework\TestCase->runTest()
+  #70 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestResult.php(729): PHPUnit\Framework\TestCase->runBare()
+  #71 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestCase.php(973): PHPUnit\Framework\TestResult->run(Object(Tests\Feature\ExampleTest))
+  #72 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestSuite.php(685): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+  #73 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestSuite.php(685): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+  #74 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\Framework\TestSuite.php(685): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+  #75 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(651): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+  #76 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\TextUI\Command.php(146): PHPUnit\TextUI\TestRunner->run(Object(PHPUnit\Framework\TestSuite), Array, Array, true)
+  #77 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\src\TextUI\Command.php(99): PHPUnit\TextUI\Command->run(Array, true)
+  #78 D:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\phpunit(107): PHPUnit\TextUI\Command::main()
+  #79 {main}
+  Failed asserting that 200 is identical to 500.[39;22m
+
+  at [32mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\tests\Feature\ExampleTest.php[39m:[32m19[39m
+     15Γûò     public function testBasicTest()
+     16Γûò     {
+     17Γûò         $response = $this->get('/');
+     18Γûò 
+  Γ₧£  19Γûò         $response->assertStatus(200);
+     20Γûò     }
+     21Γûò }
+     22Γûò
+
+  [33m1   [39m[39;1mD:\Kuliah\smester 6\Pengujian perangkat lunak\Tugas UAT Klompok lain\HospitalIMS_PPL\vendor\phpunit\phpunit\phpunit[39;22m:[39;1m107[39;22m
+  [37m    PHPUnit\TextUI\Command::main()[39m
+
+
+  [37;1mTests:  [39;22m[31;1m8 failed[39;22m[39m, [39m[32;1m62 passed[39;22m
+  [37;1mTime:   [39;22m[39m6.80s[39m
+

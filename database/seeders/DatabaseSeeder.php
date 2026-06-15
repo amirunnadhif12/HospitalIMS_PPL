@@ -16,24 +16,24 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        Storage::disk('public')->put('patient.png', config('app.url').'images/patient.png');
-        Storage::disk('public')->put('doctor.png', config('app.url').'images/doctor.png');
+        Storage::disk('public')->put('patient.png', config('app.url') . 'images/patient.png');
+        Storage::disk('public')->put('doctor.png', config('app.url') . 'images/doctor.png');
 
         $this->call(RoleSeeder::class);
         User::create([
-            'name' =>'tauseed zaman',
-            'email' =>'tauseed@test.com',
-            'password' =>bcrypt('tauseed'),
-            'role_id'=>1,
-            'created_at' =>now(),
+            'name' => 'tauseed zaman',
+            'email' => 'tauseed@test.com',
+            'password' => bcrypt('tauseed'),
+            'role_id' => 1,
+            'created_at' => now(),
         ]);
 
         User::create([
-            'name' =>'accountant',
-            'email' =>'accountant@gmail.com',
-            'password' =>bcrypt('password'),
-            'role_id'=>2,
-            'created_at' =>now(),
+            'name' => 'accountant',
+            'email' => 'accountant@gmail.com',
+            'password' => bcrypt('password'),
+            'role_id' => 2,
+            'created_at' => now(),
         ]);
 
         // User::create([
@@ -61,7 +61,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             SettingSeeder::class,
             employeeSeeder::class,
-            // patientSeeder::class,
+                // patientSeeder::class,
             blockSeeder::class,
             departmentSeeder::class,
             doctorSeeder::class,
@@ -69,7 +69,7 @@ class DatabaseSeeder extends Seeder
             roomSeeder::class,
             bedsSeeder::class,
             medicineSeeder::class,
-            ]);
+        ]);
 
         // \App\Models\User::factory(10)->create();
     }
