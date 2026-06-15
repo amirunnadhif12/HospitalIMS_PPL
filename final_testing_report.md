@@ -103,7 +103,7 @@ Eksplorasi bebas selama **60 menit** dilakukan untuk menguji ketahanan aplikasi 
 *   **Log Eksplorasi & Jalur Aneh yang Dicoba:**
     1.  **Manipulasi Form Booking Janji Temu Publik (Menit 0-10):** Menguji submit form booking tanpa memilih dokter, lalu mencoba memilih dokter. Ditemukan bug fatal di mana form memicu crash sistem (Error SQL 500) saat dikirim karena data masukan dari antarmuka pengguna tidak cocok dengan skema basis data di belakangnya.
     2.  **Menjajal Form Subscribe Newsletter di Footer (Menit 10-20):** Mencoba memasukkan email duplikat dan email format aneh. Ditemukan bug fatal di mana tombol subscribe memicu crash sistem halaman 500 (Class reference error) secara instan bagi pengguna umum.
-    3.  **Bypass Hak Akses URL Admin Tanpa Login (Menit 20-30):** Mencoba membuka langsung URL `http://127.0.0.1:8000/admin/dashboard` dari browser bersih (mode samaran). Proteksi redirect berjalan baik (diarahkan ke `/login`). Namun setelah login dengan user biasa, halaman admin *tetap* bisa dibuka karena pengecekan hak akses super admin di sisi server tidak aktif/disabled.
+    3.  **Pengujian Tautan Navigasi Dashboard Admin (Menit 20-30):** Meneliti navigasi menu Admin Area setelah login. Admin tidak dapat menemukan tautan/link cepat "Admin Area" di bilah navigasi utama untuk kembali ke dashboard admin. Tombol navigasi tersebut tersembunyi karena sistem mencoba mengecek nilai peran yang salah di backend.
     4.  **Registrasi Akun Baru (Menit 30-45):** Mencoba mendaftar melalui `/register`. Pendaftaran langsung memicu error database `NOT NULL constraint failed` pada sisi pengguna karena form registrasi tidak menyertakan pemilihan/penentuan peran default.
     5.  **Pengujian Alur Data & Tampilan Dashboard (Menit 45-60):** Menambahkan data-data dummy melalui menu admin. Ditemukan beberapa error relasi data di mana saat mengakses sub-menu alokasi bed, halaman mengalami error rendering akibat pencarian kunci relasi yang tidak sesuai pada model.
 
@@ -132,8 +132,8 @@ Seluruh bug fungsional yang ditemukan selama pengujian Black Box dirangkum dalam
 |---|---|---|---|---|
 | **BUG-01** | SQL Mismatch pada Form Booking Janji Temu (Public Booking) | **Critical** (Blocker) | 1. Akses halaman utama.  <br>2. Isi semua data form Book Appointment.  <br>3. Pilih dokter dan klik Submit. | `QueryException: Integrity constraint violation: Field 'doctor_id' doesn't have a default value`. Terjadi karena data form mengirim `'doctor'` (teks), bukan `'doctor_id'` (ID angka). |
 | **BUG-02** | Class Reference Error pada Newsletter (Footer Subscribe) | **Critical** (Blocker) | 1. Masukkan email di footer newsletter.  <br>2. Klik tombol subscribe. | `Class "App\Http\Livewire\subscriber" not found`. Menyebabkan crash halaman 500 saat mencoba subscribe. |
-| **BUG-03** | Registrasi User Gagal Akibat Missing Role ID (Auth Register) | **Critical** (Blocker) | 1. Akses halaman `/register`.  <br>2. Isi data pendaftaran dan kirim. | `NOT NULL constraint failed: users.role_id`. Registrasi tidak dapat diselesaikan karena tidak ada default role_id yang diberikan oleh sistem saat registrasi publik. |
-| **BUG-04** | Bypass Keamanan Dashboard Admin (Security Middleware) | **Major** (Security) | 1. Login sebagai user biasa (bukan admin).  <br>2. Buka URL `/admin/dashboard` secara manual. | Pengguna dengan peran non-admin dapat membuka dashboard utama admin tanpa hambatan. Terjadi eskalasi hak akses (Privilege Escalation). |
+| **BUG-03** | Hilangnya Tautan "Admin Area" pada Navbar Tampilan Utama (Navbar) | **Major** (Usability) | 1. Login sebagai akun Administrator.  <br>2. Perhatikan menu bilah navigasi utama di bagian atas. | Tautan navigasi cepat "Admin Area" tersembunyi secara permanen untuk pengguna admin karena sistem mencoba membaca properti peran yang tidak terdefinisi di backend. |
+| **BUG-04** | Registrasi User Baru Gagal Secara Total (Auth Register) | **Critical** (Blocker) | 1. Akses halaman `/register`.  <br>2. Isi data pendaftaran lengkap dan kirim. | `NOT NULL constraint failed: users.role_id`. Pengunjung umum tidak bisa mendaftar akun karena controller registrasi tidak menetapkan ID peran (`role_id`) default yang diwajibkan oleh basis data. |
 | **BUG-05** | Celah Validasi Alphabet pada Umur Pasien (Patients Validation) | **Minor** (Cosmetic) | 1. Tambah pasien baru.  <br>2. Masukkan kata `"twenty"` pada kolom Age.  <br>3. Klik Simpan. | Kolom Age menerima nilai non-numeric dan menyimpannya langsung, bukan mendeteksi bahwa input harus berupa angka. |
 
 ---
@@ -145,9 +145,9 @@ Berdasarkan hasil pengujian independen dan User Acceptance Testing (UAT) berbasi
 ### [ TIDAK LAYAK RILIS TANPA PERBAIKAN ]
 
 **Catatan Kelayakan:**
-Aplikasi ini memiliki antarmuka pengelolaan admin area yang cukup lengkap. Namun, aplikasi ini **TIDAK LAYAK RILIS** pada versi repositori aslinya karena memiliki 3 bug kritis yang memblokir fungsionalitas publik (Pemesanan Janji Temu, Registrasi User Baru, dan Langganan Newsletter) serta 1 celah keamanan bypass hak akses admin area.
+Aplikasi ini memiliki antarmuka pengelolaan admin area yang cukup lengkap. Namun, aplikasi ini **TIDAK LAYAK RILIS** pada versi repositori aslinya karena memiliki 3 bug kritis yang memblokir fungsionalitas publik (Pemesanan Janji Temu, Registrasi User Baru, dan Langganan Newsletter) serta isu aksesibilitas menu admin area.
 
-Kelompok Pemilik PL wajib melakukan perbaikan (bug fixing) terhadap form input publik, penentuan default role user, serta mengaktifkan kembali middleware proteksi akses administrator sebelum aplikasi ini dapat dirilis ke lingkungan produksi atau diserahkan sebagai tugas akhir.
+Kelompok Pemilik PL wajib melakukan perbaikan (bug fixing) terhadap form input publik, penentuan default role user pada registrasi, serta memperbaiki referensi navigasi administrator sebelum aplikasi ini dapat dirilis ke lingkungan produksi atau diserahkan sebagai tugas akhir.
 
 ---
 **Perwakilan Kelompok Penguji (QA)**  
