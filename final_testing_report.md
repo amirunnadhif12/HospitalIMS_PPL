@@ -111,25 +111,25 @@ Eksplorasi bebas selama **60 menit** dilakukan untuk menguji ketahanan aplikasi 
 
 ## BAB IV: USER ACCEPTANCE TESTING (UAT) MATRIX
 
-UAT dieksekusi dengan memerankan persona **Administrator Rumah Sakit** dan **Pengunjung/Pasien Publik**.
+UAT dieksekusi dengan memerankan persona **Administrator Rumah Sakit** dan **Pengunjung/Pasien Publik**. Setiap skenario diselaraskan secara urut dengan temuan di Defect Report.
 
-| ID UAT | Skenario Bisnis | Langkah Kerja | Hasil yang Diharapkan | Hasil Aktual | Status | Catatan Pengguna |
+| ID UAT | Skenario Bisnis | Langkah Kerja | Hasil yang Diharapkan | Hasil Aktual | Status | Temuan Bug Terkait |
 |---|---|---|---|---|---|---|
-| **UAT-01** | Login admin untuk mengelola data operasional harian. | 1. Akses halaman `/login`.  <br>2. Isi email `tauseed@test.com` and password `tauseed`.  <br>3. Klik Login. | Sistem memvalidasi kredensial, masuk to dashboard admin area. | Berhasil login dan dialihkan ke dashboard utama admin. | **Pass** | UI Dashboard memuat statistik dengan lengkap. |
-| **UAT-02** | Pasien memesan jadwal konsultasi dokter melalui landing page. | 1. Akses halaman utama `/`.  <br>2. Isi nama, email, phone, address, pilih dokter, set waktu.  <br>3. Klik Submit. | Alert sukses muncul, data terdaftar di backend admin area. | **Fail** (Halaman crash menampilkan error `doctor_id` pada rilis awal). | **Fail** | **Major Bug** terdeteksi pada form booking versi rilis awal. |
-| **UAT-03** | Pengunjung mendaftar ke newsletter rumah sakit. | 1. Gulir ke footer halaman utama.  <br>2. Isi email di kolom subscribe.  <br>3. Klik tombol subscribe. | Pesan sukses subscription tampil di layar. | **Fail** (Halaman crash menampilkan Error 500). | **Fail** | **Critical Bug** terdeteksi pada newsletter versi rilis awal. |
-| **UAT-04** | Pendaftaran pasien rawat jalan baru oleh admin. | 1. Buka menu Patients.  <br>2. Klik Add New Patient.  <br>3. Isi data dengan umur berupa teks `"twenty"`.  <br>4. Klik Save. | Sistem menolak input teks dan memunculkan error validasi angka. | **Fail** (Sistem menerima input teks `"twenty"` dan menyimpannya). | **Fail** | Celah validasi data minor pada field umur pasien. |
-| **UAT-05** | Alokasi bed rawat inap untuk pasien baru. | 1. Buka menu Beds.  <br>2. Klik Add New Bed.  <br>3. Pilih pasien, pilih kamar, set waktu.  <br>4. Klik Save. | Alokasi bed berhasil disimpan dengan status 'alloted'. | Berhasil disimpan dan status berubah menjadi alloted. | **Pass** | Alur simpan data lancar. |
-| **UAT-06** | Pengunjung umum mendaftar akun di portal rumah sakit. | 1. Akses halaman `/register`.  <br>2. Isi nama, email, password, konfirmasi password.  <br>3. Klik Register. | Akun terbuat, otomatis login ke sistem. | **Fail** (Sistem crash menampilkan error `role_id` pada saat submit). | **Fail** | **Critical Bug** terdeteksi pada sistem registrasi versi rilis awal. |
-| **UAT-07** | Mengakses dan melihat daftar ranjang (Beds). | 1. Buka menu Beds di sidebar admin. | Daftar alokasi bed tampil di tabel. | **Fail** (Halaman crash menampilkan error `rooms_id` tidak ditemukan). | **Fail** | **Major Bug** relasi model database pada modul Beds. |
-| **UAT-08** | Hak akses keamanan admin area untuk akun non-admin. | 1. Login dengan user biasa.  <br>2. Akses langsung URL `/admin/dashboard` secara manual. | Sistem menolak akses dan memunculkan error 404/403. | **Fail** (Sistem membiarkan pengguna biasa masuk ke dashboard admin). | **Fail** | Celah keamanan (Privilege Escalation) karena middleware non-aktif. |
-| **UAT-09** | Menambahkan pegawai baru dengan posisi terformat huruf besar. | 1. Buka menu Employees.  <br>2. Tambah pegawai dengan kolom Position = `"Nurse"`.  <br>3. Klik Simpan. | Pegawai tersimpan dengan sukses di database. | **Fail** (Sistem crash menampilkan `CHECK constraint failed: position`). | **Fail** | **Major Bug** akibat batasan case-sensitive posisi di database. |
+| **UAT-01** | Login admin untuk mengelola data operasional harian. | 1. Akses halaman `/login`.  <br>2. Isi email `tauseed@test.com` and password `tauseed`.  <br>3. Klik Login. | Sistem memvalidasi kredensial, masuk ke dashboard admin area. | Berhasil login dan dialihkan ke dashboard utama admin. | **Pass** | (Tidak ada bug) |
+| **UAT-02** | Pasien memesan jadwal konsultasi dokter melalui landing page. | 1. Akses halaman utama `/`.  <br>2. Isi nama, email, phone, address, pilih dokter, set waktu.  <br>3. Klik Submit. | Alert sukses muncul, data terdaftar di backend admin area. | **Fail** (Halaman crash menampilkan error `doctor_id` pada rilis awal). | **Fail** | **BUG-01** (SQL Mismatch Booking) |
+| **UAT-03** | Pengunjung mendaftar ke newsletter rumah sakit. | 1. Gulir ke footer halaman utama.  <br>2. Isi email di kolom subscribe.  <br>3. Klik tombol subscribe. | Pesan sukses subscription tampil di layar. | **Fail** (Halaman crash menampilkan Error 500). | **Fail** | **BUG-02** (Newsletter Class Error) |
+| **UAT-04** | Akses kembali ke Admin Area setelah login. | 1. Login sebagai Admin.  <br>2. Lihat menu bilah navigasi utama di bagian atas. | Tautan navigasi "Admin Area" tampil di navbar atas untuk memudahkan kembali ke dashboard. | **Fail** (Tautan tersembunyi karena pengecekan hak akses salah). | **Fail** | **BUG-03** (Navbar Link Hilang) |
+| **UAT-05** | Pengunjung umum mendaftar akun di portal rumah sakit. | 1. Akses halaman `/register`.  <br>2. Isi nama, email, password, konfirmasi password.  <br>3. Klik Register. | Akun terbuat, otomatis login ke sistem. | **Fail** (Sistem crash menampilkan error `role_id` pada saat submit). | **Fail** | **BUG-04** (Registrasi Gagal) |
+| **UAT-06** | Menambahkan pegawai baru dengan posisi terformat huruf besar. | 1. Buka menu Employees.  <br>2. Tambah pegawai dengan kolom Position = `"Nurse"`.  <br>3. Klik Simpan. | Pegawai tersimpan dengan sukses di database. | **Fail** (Sistem crash menampilkan `CHECK constraint failed: position`). | **Fail** | **BUG-05** (Casing Position Mismatch) |
+| **UAT-07** | Mengakses dan melihat daftar ranjang (Beds). | 1. Buka menu Beds di sidebar admin. | Daftar alokasi bed tampil di tabel halaman Beds. | **Fail** (Halaman crash menampilkan error `rooms_id` tidak ditemukan). | **Fail** | **BUG-06** (Beds List Page Crash) |
+| **UAT-08** | Hak akses keamanan admin area untuk akun non-admin. | 1. Login dengan user biasa.  <br>2. Akses langsung URL `/admin/dashboard` secara manual. | Sistem menolak akses dan memunculkan error 404/403. | **Fail** (Sistem membiarkan pengguna biasa masuk ke dashboard admin). | **Fail** | **BUG-07** (Bypass Keamanan Admin) |
+| **UAT-09** | Pendaftaran pasien rawat jalan baru oleh admin. | 1. Buka menu Patients.  <br>2. Klik Add New Patient.  <br>3. Isi data dengan umur berupa teks `"twenty"`.  <br>4. Klik Save. | Sistem menolak input teks dan memunculkan error validasi angka. | **Fail** (Sistem menerima input teks `"twenty"` dan menyimpannya). | **Fail** | **BUG-08** (Celah Validasi Umur) |
 
 ---
 
 ## BAB V: DEFECT REPORT (LAPORAN BUG)
 
-Seluruh bug fungsional yang ditemukan selama pengujian Black Box dirangkum dalam tabel di bawah ini.
+Seluruh bug fungsional yang ditemukan selama pengujian Black Box dirangkum dalam tabel di bawah ini dan diurutkan sesuai urutan UAT.
 
 | ID Bug | Nama Bug & Fitur | Tingkat Keparahan | Langkah Mereproduksi Bug | Bukti / Detail Teknis |
 |---|---|---|---|---|
