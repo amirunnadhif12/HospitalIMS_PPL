@@ -32,10 +32,11 @@ Pengujian dilakukan menggunakan metode **Black Box Testing** (pengujian fungsion
 ## BAB II: METODOLOGI & DESAIN PENGUJIAN
 
 ### 2.1 Tabel Test Case Input Domain (EP & BVA)
-Metode **Equivalence Partitioning (EP)** dan **Boundary Value Analysis (BVA)** diterapkan pada 3 formulir input penting dalam aplikasi untuk memvalidasi penanganan input data:
-1.  **Form Pasien Baru (Patients Form):** Menerapkan aturan panjang karakter nama (`min:6|max:50`) dan format angka telepon.
-2.  **Form Registrasi Perawat (Nurses Form):** Menerapkan validasi ukuran upload foto (`max:3072KB` / 3MB) dan tipe data.
-3.  **Form Alokasi Bed (Beds Form):** Menguji keharusan input angka ID ruangan (`room_id`) dan ID pasien (`patient_id`).
+Metode **Equivalence Partitioning (EP)** dan **Boundary Value Analysis (BVA)** diterapkan pada formulir input penting dalam aplikasi untuk memvalidasi penanganan input data:
+1.  **Form Pasien Baru (Patients Form):** Validasi panjang nama (`min:6|max:50`) dan tipe data umur serta nomor telepon.
+2.  **Form Registrasi Perawat (Nurses Form):** Validasi berkas unggahan foto (`max:3072KB` / 3MB) dan batasan numerik gaji.
+3.  **Form Alokasi Bed (Beds Form):** Validasi ID ruangan (`room_id`) dan ID pasien (`patient_id`).
+4.  **Form Hubungi Kami & Newsletter (Contact & Newsletter Form):** Validasi kelengkapan isian serta format penulisan email.
 
 | ID TC | Skenario | Input Data | Ekspektasi Hasil | Hasil Aktual | Status (Pass/Fail) |
 |---|---|---|---|---|---|
@@ -51,6 +52,14 @@ Metode **Equivalence Partitioning (EP)** dan **Boundary Value Analysis (BVA)** d
 | **TC-EP-10** | Upload file gambar melebihi batas ukuran 3MB (BVA) | Photo: Gambar 3073 KB | Validasi gagal, ukuran file terlalu besar. | Muncul error: `"The photo may not be greater than 3072 kilobytes."` | **Pass** |
 | **TC-EP-11** | Input ID Pasien non-numeric pada alokasi bed | Patient ID: `"abc"` | Validasi gagal, ID harus bertipe angka. | Muncul error: `"The patient id must be a number."` | **Pass** |
 | **TC-EP-12** | Input ID Ruangan non-numeric pada alokasi bed | Room ID: `"xyz"` | Validasi gagal, ID harus bertipe angka. | Muncul error: `"The room id must be a number."` | **Pass** |
+| **TC-EP-13** | Input Email tidak valid pada Form Hubungi Kami (EP) | Email: `"budiemail"` | Validasi gagal, format email harus menyertakan karakter `@`. | Muncul error: `"The email must be a valid email address."` | **Pass** |
+| **TC-EP-14** | Input Name kosong pada Form Hubungi Kami (EP) | Name: `""` | Validasi gagal, kolom nama wajib diisi. | Muncul error: `"The name field is required."` | **Pass** |
+| **TC-EP-15** | Input Phone dengan format non-numeric pada Hubungi Kami | Phone: `"0812-abcd"` | Validasi gagal, nomor telepon harus berupa angka. | Muncul error: `"The phone must be a number."` | **Pass** |
+| **TC-EP-16** | Input Email kosong pada Form Newsletter (EP) | Email: `""` | Validasi gagal, email langganan wajib diisi. | Muncul error: `"The email field is required."` | **Pass** |
+| **TC-EP-17** | Input Email dengan format tidak valid pada Newsletter | Email: `"newsletter.com"` | Validasi gagal, format email tidak valid. | Muncul error: `"The email must be a valid email address."` | **Pass** |
+| **TC-EP-18** | Input Gaji (Salary) negatif pada Registrasi Perawat (EP) | Salary: `-500000` | Validasi gagal, nominal gaji tidak boleh negatif. | Muncul error: `"The salary must be a positive number."` | **Pass** |
+| **TC-EP-19** | Input Tipe Kamar kosong pada Form Kamar Baru (EP) | Room Type: `""` | Validasi gagal, tipe kamar wajib dipilih. | Muncul error: `"The type field is required."` | **Pass** |
+| **TC-EP-20** | Input Kode Blok kosong pada Form Blok Baru (EP) | Block Code: `""` | Validasi gagal, kode blok wajib diisi. | Muncul error: `"The blockcode field is required."` | **Pass** |
 
 ---
 
